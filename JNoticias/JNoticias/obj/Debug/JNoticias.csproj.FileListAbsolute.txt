@@ -1,0 +1,10 @@
+C:\Users\Adiel Cardoso\Documents\GitHub\JNoticias\JNoticias\JNoticias\bin\Debug\JNoticias.exe.config
+C:\Users\Adiel Cardoso\Documents\GitHub\JNoticias\JNoticias\JNoticias\bin\Debug\JNoticias.exe
+C:\Users\Adiel Cardoso\Documents\GitHub\JNoticias\JNoticias\JNoticias\bin\Debug\JNoticias.pdb
+C:\Users\Adiel Cardoso\Documents\GitHub\JNoticias\JNoticias\JNoticias\obj\Debug\JNoticias.csproj.AssemblyReference.cache
+C:\Users\Adiel Cardoso\Documents\GitHub\JNoticias\JNoticias\JNoticias\obj\Debug\JNoticias.Form1.resources
+C:\Users\Adiel Cardoso\Documents\GitHub\JNoticias\JNoticias\JNoticias\obj\Debug\JNoticias.Properties.Resources.resources
+C:\Users\Adiel Cardoso\Documents\GitHub\JNoticias\JNoticias\JNoticias\obj\Debug\JNoticias.csproj.GenerateResource.cache
+C:\Users\Adiel Cardoso\Documents\GitHub\JNoticias\JNoticias\JNoticias\obj\Debug\JNoticias.csproj.CoreCompileInputs.cache
+C:\Users\Adiel Cardoso\Documents\GitHub\JNoticias\JNoticias\JNoticias\obj\Debug\JNoticias.exe
+C:\Users\Adiel Cardoso\Documents\GitHub\JNoticias\JNoticias\JNoticias\obj\Debug\JNoticias.pdb
