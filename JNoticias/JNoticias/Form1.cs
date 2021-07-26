@@ -17,6 +17,10 @@ namespace JNoticias
             InitializeComponent();
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            F_Noticias f_Noticias = new F_Noticias();
+            f_Noticias.ShowDialog();
+        }
     }
 }
