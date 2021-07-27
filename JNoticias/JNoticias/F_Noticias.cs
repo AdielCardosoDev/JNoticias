@@ -24,6 +24,10 @@ namespace JNoticias
             noticias.Data = C_data.Text;
             noticias.Hora = C_hora.Text;
             noticias.Descricao = C_descrisao.Text;
+
+            Banco.NovaNoticia(noticias);
+
+
         }
     }
 }

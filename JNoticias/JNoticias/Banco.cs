@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SQLite;
+using System.Windows.Forms;
 
 namespace JNoticias
 {
@@ -44,10 +45,25 @@ namespace JNoticias
         
         public static void NovaNoticia(Noticias n)
         {
-            var cmd = conexaoBanco().CreateCommand();
-            cmd.CommandText = "INSERT INTO  tb_Noticias (Titulo, Data, Hora, Descricao) VALUES (@titulo, @data, @hora, @descricao)";
+            try
+            {
+                var cmd = conexaoBanco().CreateCommand();
+                cmd.CommandText = "INSERT INTO  tb_Noticias (Titulo, Data, Hora, Descricao) VALUES (@titulo, @data, @hora, @descricao)";
+                cmd.Parameters.AddWithValue("@titulo", n.Titulo);
+                cmd.Parameters.AddWithValue("@data", n.Data);
+                cmd.Parameters.AddWithValue("@hora", n.Hora);
+                cmd.Parameters.AddWithValue("@descricao", n.Descricao);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Noticia Salva");
+                conexaoBanco().Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Algo Deu Errado...");
+            }
+
         }
 
-        //Fim da Função
+       
     }
 }
