@@ -36,8 +36,18 @@ namespace JNoticias
             }
             catch(Exception ex)
             {
+                conexaoBanco().Close();
                 throw ex;
             }
         }
+        //Funções da Nova Noticia
+        
+        public static void NovaNoticia(Noticias n)
+        {
+            var cmd = conexaoBanco().CreateCommand();
+            cmd.CommandText = "INSERT INTO  tb_Noticias (Titulo, Data, Hora, Descricao) VALUES (@titulo, @data, @hora, @descricao)";
+        }
+
+        //Fim da Função
     }
 }

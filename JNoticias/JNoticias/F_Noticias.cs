@@ -16,5 +16,14 @@ namespace JNoticias
         {
             InitializeComponent();
         }
+
+        private void btn_salvar_Click(object sender, EventArgs e)
+        {
+            Noticias noticias = new Noticias();
+            noticias.Titulo = C_titulo.Text;
+            noticias.Data = C_data.Text;
+            noticias.Hora = C_hora.Text;
+            noticias.Descricao = C_descrisao.Text;
+        }
     }
 }

@@ -41,8 +41,8 @@ namespace JNoticias
             this.C_data = new System.Windows.Forms.TextBox();
             this.C_hora = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.C_descrisao = new System.Windows.Forms.TextBox();
+            this.btn_salvar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,28 +157,29 @@ namespace JNoticias
             this.label7.TabIndex = 10;
             this.label7.Text = "Descrição";
             // 
-            // textBox1
+            // C_descrisao
             // 
-            this.textBox1.Location = new System.Drawing.Point(31, 280);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(311, 102);
-            this.textBox1.TabIndex = 11;
+            this.C_descrisao.Location = new System.Drawing.Point(31, 280);
+            this.C_descrisao.Multiline = true;
+            this.C_descrisao.Name = "C_descrisao";
+            this.C_descrisao.Size = new System.Drawing.Size(311, 102);
+            this.C_descrisao.TabIndex = 11;
             // 
-            // button1
+            // btn_salvar
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(57)))), ((int)(((byte)(70)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(31, 388);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 26);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_salvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(57)))), ((int)(((byte)(70)))));
+            this.btn_salvar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            this.btn_salvar.FlatAppearance.BorderSize = 0;
+            this.btn_salvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_salvar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_salvar.ForeColor = System.Drawing.Color.White;
+            this.btn_salvar.Location = new System.Drawing.Point(31, 388);
+            this.btn_salvar.Name = "btn_salvar";
+            this.btn_salvar.Size = new System.Drawing.Size(127, 26);
+            this.btn_salvar.TabIndex = 12;
+            this.btn_salvar.Text = "Salvar";
+            this.btn_salvar.UseVisualStyleBackColor = false;
+            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
             // 
             // F_Noticias
             // 
@@ -186,8 +187,8 @@ namespace JNoticias
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btn_salvar);
+            this.Controls.Add(this.C_descrisao);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.C_hora);
             this.Controls.Add(this.C_data);
@@ -222,7 +223,7 @@ namespace JNoticias
         private System.Windows.Forms.TextBox C_data;
         private System.Windows.Forms.TextBox C_hora;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox C_descrisao;
+        private System.Windows.Forms.Button btn_salvar;
     }
 }
