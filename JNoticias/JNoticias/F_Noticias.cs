@@ -32,7 +32,7 @@ namespace JNoticias
                 C_descrisao.Text.Trim().ToString() == ""
                 )
             {
-                MessageBox.Show("Todos os campos são obrigatorios!!!");
+                MessageBox.Show("Todos os campos são obrigatórios!!!");
             }
             else
             {

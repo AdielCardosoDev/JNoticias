@@ -55,12 +55,12 @@ namespace JNoticias
                 cmd.Parameters.AddWithValue("@hora", n.Hora);
                 cmd.Parameters.AddWithValue("@descricao", n.Descricao);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Noticia Salva");
+                MessageBox.Show("Noticia Salva...");
                 conexaoBanco().Close();
             }
             catch
             {                
-                MessageBox.Show("Algo Deu Errado...");
+                MessageBox.Show("Erro na comunicação com o Banco!!!");
             }
 
         }

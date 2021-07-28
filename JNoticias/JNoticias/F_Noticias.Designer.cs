@@ -107,6 +107,7 @@ namespace JNoticias
             // 
             this.C_titulo.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.C_titulo.Location = new System.Drawing.Point(31, 175);
+            this.C_titulo.MaxLength = 50;
             this.C_titulo.Name = "C_titulo";
             this.C_titulo.Size = new System.Drawing.Size(393, 23);
             this.C_titulo.TabIndex = 5;
@@ -148,6 +149,7 @@ namespace JNoticias
             // 
             this.C_descrisao.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.C_descrisao.Location = new System.Drawing.Point(31, 280);
+            this.C_descrisao.MaxLength = 1000;
             this.C_descrisao.Multiline = true;
             this.C_descrisao.Name = "C_descrisao";
             this.C_descrisao.Size = new System.Drawing.Size(393, 102);
@@ -226,7 +228,7 @@ namespace JNoticias
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(259, 13);
             this.label8.TabIndex = 17;
-            this.label8.Text = "*TODOS OS CAMPOS SÃO OBRIGATORIOS!";
+            this.label8.Text = "*TODOS OS CAMPOS SÃO OBRIGATÔRIOS!";
             // 
             // F_Noticias
             // 
