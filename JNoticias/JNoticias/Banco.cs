@@ -44,7 +44,8 @@ namespace JNoticias
         
         
         public static void NovaNoticia(Noticias n)
-        {
+        {           
+
             try
             {
                 var cmd = conexaoBanco().CreateCommand();

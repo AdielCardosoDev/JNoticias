@@ -25,7 +25,21 @@ namespace JNoticias
             noticias.Hora = C_hora.Text;
             noticias.Descricao = C_descrisao.Text;
 
-            Banco.NovaNoticia(noticias);
+            if (
+                C_titulo.Text.Trim().ToString() == "" ||
+                C_data.Text.Trim().ToString() == ""||
+                C_hora.Text.Trim().ToString() == ""||
+                C_descrisao.Text.Trim().ToString() == ""
+                )
+            {
+                MessageBox.Show("Todos os campos são obrigatorios!!!");
+            }
+            else
+            {
+                Banco.NovaNoticia(noticias);
+            }
+
+            
 
 
         }
