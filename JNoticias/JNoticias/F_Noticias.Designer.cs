@@ -43,6 +43,8 @@ namespace JNoticias
             this.btn_salvar = new System.Windows.Forms.Button();
             this.C_data = new System.Windows.Forms.MaskedTextBox();
             this.C_hora = new System.Windows.Forms.MaskedTextBox();
+            this.btn_alterar = new System.Windows.Forms.Button();
+            this.btn_excluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,7 +107,7 @@ namespace JNoticias
             this.C_titulo.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.C_titulo.Location = new System.Drawing.Point(31, 175);
             this.C_titulo.Name = "C_titulo";
-            this.C_titulo.Size = new System.Drawing.Size(311, 23);
+            this.C_titulo.Size = new System.Drawing.Size(393, 23);
             this.C_titulo.TabIndex = 5;
             // 
             // label5
@@ -147,7 +149,7 @@ namespace JNoticias
             this.C_descrisao.Location = new System.Drawing.Point(31, 280);
             this.C_descrisao.Multiline = true;
             this.C_descrisao.Name = "C_descrisao";
-            this.C_descrisao.Size = new System.Drawing.Size(311, 102);
+            this.C_descrisao.Size = new System.Drawing.Size(393, 102);
             this.C_descrisao.TabIndex = 11;
             // 
             // btn_salvar
@@ -188,12 +190,40 @@ namespace JNoticias
             this.C_hora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.C_hora.ValidatingType = typeof(System.DateTime);
             // 
+            // btn_alterar
+            // 
+            this.btn_alterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(57)))), ((int)(((byte)(70)))));
+            this.btn_alterar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_alterar.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_alterar.ForeColor = System.Drawing.Color.White;
+            this.btn_alterar.Location = new System.Drawing.Point(164, 388);
+            this.btn_alterar.Name = "btn_alterar";
+            this.btn_alterar.Size = new System.Drawing.Size(127, 26);
+            this.btn_alterar.TabIndex = 15;
+            this.btn_alterar.Text = "Salvar Alterações";
+            this.btn_alterar.UseVisualStyleBackColor = false;
+            // 
+            // btn_excluir
+            // 
+            this.btn_excluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(57)))), ((int)(((byte)(70)))));
+            this.btn_excluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_excluir.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_excluir.ForeColor = System.Drawing.Color.White;
+            this.btn_excluir.Location = new System.Drawing.Point(297, 389);
+            this.btn_excluir.Name = "btn_excluir";
+            this.btn_excluir.Size = new System.Drawing.Size(127, 26);
+            this.btn_excluir.TabIndex = 16;
+            this.btn_excluir.Text = "Excluir";
+            this.btn_excluir.UseVisualStyleBackColor = false;
+            // 
             // F_Noticias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_excluir);
+            this.Controls.Add(this.btn_alterar);
             this.Controls.Add(this.C_hora);
             this.Controls.Add(this.C_data);
             this.Controls.Add(this.btn_salvar);
@@ -232,5 +262,7 @@ namespace JNoticias
         private System.Windows.Forms.Button btn_salvar;
         private System.Windows.Forms.MaskedTextBox C_data;
         private System.Windows.Forms.MaskedTextBox C_hora;
+        private System.Windows.Forms.Button btn_alterar;
+        private System.Windows.Forms.Button btn_excluir;
     }
 }

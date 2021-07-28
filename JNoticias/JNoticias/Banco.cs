@@ -41,7 +41,7 @@ namespace JNoticias
                 throw ex;
             }
         }
-        //Funções da Nova Noticia
+        
         
         public static void NovaNoticia(Noticias n)
         {
@@ -57,8 +57,8 @@ namespace JNoticias
                 MessageBox.Show("Noticia Salva");
                 conexaoBanco().Close();
             }
-            catch(Exception ex)
-            {
+            catch
+            {                
                 MessageBox.Show("Algo Deu Errado...");
             }
 
