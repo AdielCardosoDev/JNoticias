@@ -23,26 +23,32 @@ namespace JNoticias
 
         public static DataTable ObterTodasNoticias()
         {
+
             SQLiteDataAdapter da = null;
             DataTable dt = new DataTable();
+
             try
             {
-                using (var cmd = conexaoBanco().CreateCommand())
-                {
-                    cmd.CommandText = "SELECT *FROM tb_Noticias";
-                    da = new SQLiteDataAdapter(cmd.CommandText, conexaoBanco());
+                
+                    var vcon = conexaoBanco();
+                    var cmd = vcon.CreateCommand();
+                    cmd.CommandText = "select ID, Descricao from tb_Noticias";
+                    da = new SQLiteDataAdapter(cmd.CommandText, vcon);                   
                     da.Fill(dt);
+                    vcon.Close();
                     return dt;
-                }
+                
             }
+
             catch(Exception ex)
             {
-                conexaoBanco().Close();
                 throw ex;
             }
+            
         }
+
         
-        
+
         public static void NovaNoticia(Noticias n)
         {           
 
@@ -51,12 +57,13 @@ namespace JNoticias
                 var cmd = conexaoBanco().CreateCommand();
                 cmd.CommandText = "INSERT INTO  tb_Noticias (Titulo, Data, Hora, Descricao) VALUES (@titulo, @data, @hora, @descricao)";
                 cmd.Parameters.AddWithValue("@titulo", n.Titulo);
-                cmd.Parameters.AddWithValue("@data", n.Data);
-                cmd.Parameters.AddWithValue("@hora", n.Hora);
+                cmd.Parameters.AddWithValue("@data", n.Data.Trim().ToString());
+                cmd.Parameters.AddWithValue("@hora", n.Hora.Trim().ToString());
                 cmd.Parameters.AddWithValue("@descricao", n.Descricao);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Noticia Salva...");
+                MessageBox.Show("Noticia Salva...");               
                 conexaoBanco().Close();
+                
             }
             catch
             {                
@@ -65,6 +72,7 @@ namespace JNoticias
 
         }
 
-       
+        
+        
     }
 }

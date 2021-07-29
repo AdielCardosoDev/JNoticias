@@ -14,13 +14,18 @@ namespace JNoticias
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             F_Noticias f_Noticias = new F_Noticias();
             f_Noticias.ShowDialog();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            dgv_listanoticias.DataSource = Banco.ObterTodasNoticias();
         }
     }
 }

@@ -43,5 +43,10 @@ namespace JNoticias
 
 
         }
+
+        private void F_Noticias_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

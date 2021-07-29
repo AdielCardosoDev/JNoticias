@@ -36,7 +36,10 @@ namespace JNoticias
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_adicionar = new System.Windows.Forms.Button();
+            this.dgv_listanoticias = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_listanoticias)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -63,6 +66,7 @@ namespace JNoticias
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.dgv_listanoticias);
             this.panel1.Location = new System.Drawing.Point(27, 159);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(742, 245);
@@ -105,6 +109,17 @@ namespace JNoticias
             this.btn_adicionar.UseVisualStyleBackColor = false;
             this.btn_adicionar.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dgv_listanoticias
+            // 
+            this.dgv_listanoticias.AllowUserToAddRows = false;
+            this.dgv_listanoticias.AllowUserToDeleteRows = false;
+            this.dgv_listanoticias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_listanoticias.Location = new System.Drawing.Point(0, 0);
+            this.dgv_listanoticias.Name = "dgv_listanoticias";
+            this.dgv_listanoticias.ReadOnly = true;
+            this.dgv_listanoticias.Size = new System.Drawing.Size(742, 245);
+            this.dgv_listanoticias.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,7 +136,10 @@ namespace JNoticias
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "JNoticias";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_listanoticias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,6 +153,7 @@ namespace JNoticias
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_adicionar;
+        private System.Windows.Forms.DataGridView dgv_listanoticias;
     }
 }
 
