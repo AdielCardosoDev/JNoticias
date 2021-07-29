@@ -41,11 +41,11 @@ namespace JNoticias
             this.label7 = new System.Windows.Forms.Label();
             this.C_descrisao = new System.Windows.Forms.TextBox();
             this.btn_salvar = new System.Windows.Forms.Button();
-            this.C_data = new System.Windows.Forms.MaskedTextBox();
-            this.C_hora = new System.Windows.Forms.MaskedTextBox();
             this.btn_alterar = new System.Windows.Forms.Button();
             this.btn_excluir = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.C_data = new System.Windows.Forms.DateTimePicker();
+            this.C_hora = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -171,28 +171,6 @@ namespace JNoticias
             this.btn_salvar.UseVisualStyleBackColor = false;
             this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
             // 
-            // C_data
-            // 
-            this.C_data.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C_data.Location = new System.Drawing.Point(31, 227);
-            this.C_data.Mask = "00/00/0000";
-            this.C_data.Name = "C_data";
-            this.C_data.Size = new System.Drawing.Size(75, 23);
-            this.C_data.TabIndex = 13;
-            this.C_data.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.C_data.ValidatingType = typeof(System.DateTime);
-            // 
-            // C_hora
-            // 
-            this.C_hora.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C_hora.Location = new System.Drawing.Point(142, 227);
-            this.C_hora.Mask = "00:00";
-            this.C_hora.Name = "C_hora";
-            this.C_hora.Size = new System.Drawing.Size(39, 23);
-            this.C_hora.TabIndex = 14;
-            this.C_hora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.C_hora.ValidatingType = typeof(System.DateTime);
-            // 
             // btn_alterar
             // 
             this.btn_alterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(57)))), ((int)(((byte)(70)))));
@@ -230,17 +208,38 @@ namespace JNoticias
             this.label8.TabIndex = 17;
             this.label8.Text = "*TODOS OS CAMPOS SÃO OBRIGATÔRIOS!";
             // 
+            // C_data
+            // 
+            this.C_data.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C_data.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C_data.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.C_data.Location = new System.Drawing.Point(31, 227);
+            this.C_data.Name = "C_data";
+            this.C_data.Size = new System.Drawing.Size(82, 23);
+            this.C_data.TabIndex = 18;
+            // 
+            // C_hora
+            // 
+            this.C_hora.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C_hora.Location = new System.Drawing.Point(142, 227);
+            this.C_hora.Mask = "00:00";
+            this.C_hora.Name = "C_hora";
+            this.C_hora.Size = new System.Drawing.Size(39, 23);
+            this.C_hora.TabIndex = 14;
+            this.C_hora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.C_hora.ValidatingType = typeof(System.DateTime);
+            // 
             // F_Noticias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.C_data);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btn_excluir);
             this.Controls.Add(this.btn_alterar);
             this.Controls.Add(this.C_hora);
-            this.Controls.Add(this.C_data);
             this.Controls.Add(this.btn_salvar);
             this.Controls.Add(this.C_descrisao);
             this.Controls.Add(this.label7);
@@ -276,10 +275,10 @@ namespace JNoticias
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox C_descrisao;
         private System.Windows.Forms.Button btn_salvar;
-        private System.Windows.Forms.MaskedTextBox C_data;
-        private System.Windows.Forms.MaskedTextBox C_hora;
         private System.Windows.Forms.Button btn_alterar;
         private System.Windows.Forms.Button btn_excluir;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker C_data;
+        private System.Windows.Forms.MaskedTextBox C_hora;
     }
 }
