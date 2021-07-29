@@ -27,5 +27,10 @@ namespace JNoticias
         {
             dgv_listanoticias.DataSource = Banco.ObterTodasNoticias();
         }
+
+        private void btn_atualizarLista_Click(object sender, EventArgs e)
+        {
+            dgv_listanoticias.DataSource = Banco.ObterTodasNoticias();
+        }
     }
 }

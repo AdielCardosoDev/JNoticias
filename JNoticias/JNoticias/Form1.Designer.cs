@@ -33,10 +33,11 @@ namespace JNoticias
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgv_listanoticias = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_adicionar = new System.Windows.Forms.Button();
-            this.dgv_listanoticias = new System.Windows.Forms.DataGridView();
+            this.btn_atualizarLista = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listanoticias)).BeginInit();
@@ -72,6 +73,17 @@ namespace JNoticias
             this.panel1.Size = new System.Drawing.Size(742, 245);
             this.panel1.TabIndex = 2;
             // 
+            // dgv_listanoticias
+            // 
+            this.dgv_listanoticias.AllowUserToAddRows = false;
+            this.dgv_listanoticias.AllowUserToDeleteRows = false;
+            this.dgv_listanoticias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_listanoticias.Location = new System.Drawing.Point(0, 0);
+            this.dgv_listanoticias.Name = "dgv_listanoticias";
+            this.dgv_listanoticias.ReadOnly = true;
+            this.dgv_listanoticias.Size = new System.Drawing.Size(742, 245);
+            this.dgv_listanoticias.TabIndex = 0;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -99,9 +111,9 @@ namespace JNoticias
             this.btn_adicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(57)))), ((int)(((byte)(70)))));
             this.btn_adicionar.FlatAppearance.BorderSize = 0;
             this.btn_adicionar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_adicionar.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_adicionar.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_adicionar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_adicionar.Location = new System.Drawing.Point(653, 130);
+            this.btn_adicionar.Location = new System.Drawing.Point(531, 130);
             this.btn_adicionar.Name = "btn_adicionar";
             this.btn_adicionar.Size = new System.Drawing.Size(116, 23);
             this.btn_adicionar.TabIndex = 5;
@@ -109,16 +121,19 @@ namespace JNoticias
             this.btn_adicionar.UseVisualStyleBackColor = false;
             this.btn_adicionar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dgv_listanoticias
+            // btn_atualizarLista
             // 
-            this.dgv_listanoticias.AllowUserToAddRows = false;
-            this.dgv_listanoticias.AllowUserToDeleteRows = false;
-            this.dgv_listanoticias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_listanoticias.Location = new System.Drawing.Point(0, 0);
-            this.dgv_listanoticias.Name = "dgv_listanoticias";
-            this.dgv_listanoticias.ReadOnly = true;
-            this.dgv_listanoticias.Size = new System.Drawing.Size(742, 245);
-            this.dgv_listanoticias.TabIndex = 0;
+            this.btn_atualizarLista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(57)))), ((int)(((byte)(70)))));
+            this.btn_atualizarLista.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_atualizarLista.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atualizarLista.ForeColor = System.Drawing.Color.White;
+            this.btn_atualizarLista.Location = new System.Drawing.Point(653, 130);
+            this.btn_atualizarLista.Name = "btn_atualizarLista";
+            this.btn_atualizarLista.Size = new System.Drawing.Size(116, 23);
+            this.btn_atualizarLista.TabIndex = 6;
+            this.btn_atualizarLista.Text = "Atualizar Lista";
+            this.btn_atualizarLista.UseVisualStyleBackColor = false;
+            this.btn_atualizarLista.Click += new System.EventHandler(this.btn_atualizarLista_Click);
             // 
             // Form1
             // 
@@ -126,6 +141,7 @@ namespace JNoticias
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_atualizarLista);
             this.Controls.Add(this.btn_adicionar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -154,6 +170,7 @@ namespace JNoticias
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_adicionar;
         private System.Windows.Forms.DataGridView dgv_listanoticias;
+        private System.Windows.Forms.Button btn_atualizarLista;
     }
 }
 

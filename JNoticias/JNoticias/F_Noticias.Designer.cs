@@ -167,7 +167,7 @@ namespace JNoticias
             this.btn_salvar.Name = "btn_salvar";
             this.btn_salvar.Size = new System.Drawing.Size(127, 26);
             this.btn_salvar.TabIndex = 12;
-            this.btn_salvar.Text = "Salvar";
+            this.btn_salvar.Text = "Gravar";
             this.btn_salvar.UseVisualStyleBackColor = false;
             this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
             // 

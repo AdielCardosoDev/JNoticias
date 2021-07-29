@@ -59,10 +59,11 @@ namespace JNoticias
                 cmd.Parameters.AddWithValue("@descricao", n.Descricao);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Noticia Salva...");               
-                conexaoBanco().Close();
+                conexaoBanco().Close();          
 
-                
-                
+
+
+
             }
             catch
             {                
@@ -72,6 +73,7 @@ namespace JNoticias
         }
 
         
-        
+
+
     }
 }

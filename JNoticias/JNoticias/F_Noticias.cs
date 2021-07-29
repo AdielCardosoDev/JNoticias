@@ -37,6 +37,10 @@ namespace JNoticias
             else
             {
                 Banco.NovaNoticia(noticias);
+
+                C_titulo.Clear();
+                C_hora.Clear();
+                C_descrisao.Clear();
             }
 
             
