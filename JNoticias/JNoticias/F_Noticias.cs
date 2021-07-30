@@ -41,6 +41,7 @@ namespace JNoticias
                 C_titulo.Clear();
                 C_hora.Clear();
                 C_descrisao.Clear();
+                C_titulo.Focus();
             }
 
             

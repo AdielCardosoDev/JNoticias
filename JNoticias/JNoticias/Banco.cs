@@ -31,7 +31,7 @@ namespace JNoticias
             {                
                 var vcon = conexaoBanco();
                 var cmd = vcon.CreateCommand();
-                cmd.CommandText = "select ID, Titulo, Descricao, Data, Hora from tb_Noticias";
+                cmd.CommandText = "select ID, Titulo, Descricao as 'Descrição da Noticia', Data, Hora from tb_Noticias";
                 da = new SQLiteDataAdapter(cmd.CommandText, vcon);                   
                 da.Fill(dt);
                 vcon.Close();

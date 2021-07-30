@@ -26,11 +26,19 @@ namespace JNoticias
         private void Form1_Load(object sender, EventArgs e)
         {
             dgv_listanoticias.DataSource = Banco.ObterTodasNoticias();
+            dgv_listanoticias.Columns[0].Width = 50;
+            dgv_listanoticias.Columns[1].Width = 200;
+            dgv_listanoticias.Columns[2].Width = 347;
+            dgv_listanoticias.Columns[3].Width = 75;
+            dgv_listanoticias.Columns[4].Width = 50;
+
         }
 
         private void btn_atualizarLista_Click(object sender, EventArgs e)
         {
             dgv_listanoticias.DataSource = Banco.ObterTodasNoticias();
+            
+
         }
     }
 }

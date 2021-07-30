@@ -29,6 +29,7 @@ namespace JNoticias
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -77,10 +78,22 @@ namespace JNoticias
             // 
             this.dgv_listanoticias.AllowUserToAddRows = false;
             this.dgv_listanoticias.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_listanoticias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_listanoticias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_listanoticias.EnableHeadersVisualStyles = false;
             this.dgv_listanoticias.Location = new System.Drawing.Point(0, 0);
+            this.dgv_listanoticias.MultiSelect = false;
             this.dgv_listanoticias.Name = "dgv_listanoticias";
             this.dgv_listanoticias.ReadOnly = true;
+            this.dgv_listanoticias.RowHeadersVisible = false;
+            this.dgv_listanoticias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_listanoticias.Size = new System.Drawing.Size(742, 245);
             this.dgv_listanoticias.TabIndex = 0;
             // 
