@@ -96,7 +96,31 @@ namespace JNoticias
 
         }
 
-        
+
+        public static DataTable AtualizarNoticia(Noticias n)
+        {
+
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+
+            try
+            {
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "UPDATE tb_Noticias SET Titulo='"+n.Titulo+"', Data='"+n.Data+"', Hora='"+n.Hora+"', descricao='"+n.Descricao+"' WHERE ID=" + n.ID;
+                da = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                cmd.ExecuteNonQuery();
+                vcon.Close();
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+
 
 
     }

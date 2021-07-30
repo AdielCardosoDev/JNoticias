@@ -39,10 +39,7 @@ namespace JNoticias
             dgv_listanoticias.DataSource = Banco.ObterTodasNoticias();         
 
         }
-        private void dgv_listanoticias_SelectionChanged(object sender, EventArgs e)
-        {
-            
-        }
+        
 
     }
 }

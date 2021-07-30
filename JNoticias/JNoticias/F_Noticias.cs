@@ -73,5 +73,16 @@ namespace JNoticias
             }
             
         }
+
+        private void btn_alterar_Click(object sender, EventArgs e)
+        {
+            Noticias n = new Noticias();
+            n.Titulo = C_titulo.Text;
+            n.Data = C_data.Text;
+            n.Hora = C_hora.Text;
+            n.Descricao = C_descrisao.Text;
+            Banco.AtualizarNoticia(n);
+            dgv_listanoticias.DataSource = Banco.ObterTodasNoticias();
+        }
     }
 }

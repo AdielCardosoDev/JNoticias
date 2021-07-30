@@ -186,6 +186,7 @@ namespace JNoticias
             this.btn_alterar.TabIndex = 15;
             this.btn_alterar.Text = "Salvar Alterações";
             this.btn_alterar.UseVisualStyleBackColor = false;
+            this.btn_alterar.Click += new System.EventHandler(this.btn_alterar_Click);
             // 
             // btn_excluir
             // 
@@ -246,13 +247,13 @@ namespace JNoticias
             this.dgv_listanoticias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_listanoticias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_listanoticias.EnableHeadersVisualStyles = false;
-            this.dgv_listanoticias.Location = new System.Drawing.Point(466, 111);
+            this.dgv_listanoticias.Location = new System.Drawing.Point(447, 111);
             this.dgv_listanoticias.MultiSelect = false;
             this.dgv_listanoticias.Name = "dgv_listanoticias";
             this.dgv_listanoticias.ReadOnly = true;
             this.dgv_listanoticias.RowHeadersVisible = false;
             this.dgv_listanoticias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_listanoticias.Size = new System.Drawing.Size(605, 288);
+            this.dgv_listanoticias.Size = new System.Drawing.Size(624, 303);
             this.dgv_listanoticias.TabIndex = 19;
             this.dgv_listanoticias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_listanoticias_CellContentClick);
             // 
