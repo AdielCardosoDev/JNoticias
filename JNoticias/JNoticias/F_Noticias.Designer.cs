@@ -29,6 +29,7 @@ namespace JNoticias
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_Noticias));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,7 +47,9 @@ namespace JNoticias
             this.label8 = new System.Windows.Forms.Label();
             this.C_data = new System.Windows.Forms.DateTimePicker();
             this.C_hora = new System.Windows.Forms.MaskedTextBox();
+            this.dgv_listanoticias = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_listanoticias)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -64,7 +67,7 @@ namespace JNoticias
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto Medium", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(57)))), ((int)(((byte)(70)))));
-            this.label1.Location = new System.Drawing.Point(347, 19);
+            this.label1.Location = new System.Drawing.Point(590, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(310, 41);
             this.label1.TabIndex = 1;
@@ -229,12 +232,37 @@ namespace JNoticias
             this.C_hora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.C_hora.ValidatingType = typeof(System.DateTime);
             // 
+            // dgv_listanoticias
+            // 
+            this.dgv_listanoticias.AllowUserToAddRows = false;
+            this.dgv_listanoticias.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_listanoticias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_listanoticias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_listanoticias.EnableHeadersVisualStyles = false;
+            this.dgv_listanoticias.Location = new System.Drawing.Point(466, 111);
+            this.dgv_listanoticias.MultiSelect = false;
+            this.dgv_listanoticias.Name = "dgv_listanoticias";
+            this.dgv_listanoticias.ReadOnly = true;
+            this.dgv_listanoticias.RowHeadersVisible = false;
+            this.dgv_listanoticias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_listanoticias.Size = new System.Drawing.Size(605, 288);
+            this.dgv_listanoticias.TabIndex = 19;
+            this.dgv_listanoticias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_listanoticias_CellContentClick);
+            // 
             // F_Noticias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1083, 450);
+            this.Controls.Add(this.dgv_listanoticias);
             this.Controls.Add(this.C_data);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btn_excluir);
@@ -257,6 +285,7 @@ namespace JNoticias
             this.Text = "JNoticias - Cadastro";
             this.Load += new System.EventHandler(this.F_Noticias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_listanoticias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,5 +309,6 @@ namespace JNoticias
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker C_data;
         private System.Windows.Forms.MaskedTextBox C_hora;
+        private System.Windows.Forms.DataGridView dgv_listanoticias;
     }
 }

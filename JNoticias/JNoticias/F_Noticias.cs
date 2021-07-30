@@ -42,15 +42,35 @@ namespace JNoticias
                 C_hora.Clear();
                 C_descrisao.Clear();
                 C_titulo.Focus();
+                dgv_listanoticias.DataSource = Banco.ObterTodasNoticias();
+
             }
-
-            
-
-
         }
 
         private void F_Noticias_Load(object sender, EventArgs e)
         {
+            dgv_listanoticias.DataSource = Banco.ObterTodasNoticias();
+            dgv_listanoticias.Columns[0].Width = 50;
+            dgv_listanoticias.Columns[1].Width = 200;
+            dgv_listanoticias.Columns[2].Width = 347;
+            dgv_listanoticias.Columns[3].Width = 75;
+            dgv_listanoticias.Columns[4].Width = 50;
+        }
+
+        private void dgv_listanoticias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgb = (DataGridView)sender;
+            int contLinhas = dgv_listanoticias.SelectedRows.Count;
+            if(contLinhas > 0)
+            {
+                DataTable dt = new DataTable();
+                string vid = dgv_listanoticias.SelectedRows[0].Cells[0].Value.ToString();
+                dt = Banco.ObterDadosNoticias(vid);
+                C_titulo.Text = dt.Rows[0].Field<string>("Titulo").ToString();
+                C_data.Text = dt.Rows[0].Field<string>("Data").ToString();
+                C_hora.Text = dt.Rows[0].Field<string>("Hora").ToString();
+                C_descrisao.Text = dt.Rows[0].Field<string>("descricao").ToString();
+            }
             
         }
     }

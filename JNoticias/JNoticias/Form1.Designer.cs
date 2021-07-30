@@ -96,6 +96,7 @@ namespace JNoticias
             this.dgv_listanoticias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_listanoticias.Size = new System.Drawing.Size(742, 245);
             this.dgv_listanoticias.TabIndex = 0;
+            
             // 
             // label2
             // 

@@ -36,9 +36,13 @@ namespace JNoticias
 
         private void btn_atualizarLista_Click(object sender, EventArgs e)
         {
-            dgv_listanoticias.DataSource = Banco.ObterTodasNoticias();
-            
+            dgv_listanoticias.DataSource = Banco.ObterTodasNoticias();         
 
         }
+        private void dgv_listanoticias_SelectionChanged(object sender, EventArgs e)
+        {
+            
+        }
+
     }
 }

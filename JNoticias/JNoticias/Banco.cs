@@ -44,7 +44,31 @@ namespace JNoticias
             
         }
 
-        
+
+        public static DataTable ObterDadosNoticias(string id)
+        {
+
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+
+            try
+            {
+                var vcon = conexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "select *from tb_Noticias WHERE ID=" + id;
+                da = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                da.Fill(dt);
+                vcon.Close();
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+
 
         public static void NovaNoticia(Noticias n)
         {           
